@@ -1,8 +1,10 @@
 # Hacktoberfest 2020 Hello World !!!
 
-Welcome to Hacktoberfest 2020.
-HacktoberFest Hello World in every other language ever.
-Just fork it and add a `'Hello World'` program to contribute for hacktober fest and send a Pull Request!!
+## Welcome to Hacktoberfest 2020.
+
+Aim of this repository is to help someone to learn, participate in Hacktober and contribute their code.
+Any Program in any language accecpted.
+If you can explain your code with submission of it that would be better for beginners to understand.
 
 ## Requirements
 
