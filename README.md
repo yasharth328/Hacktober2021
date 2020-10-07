@@ -5,6 +5,7 @@
 Aim of this repository is to help someone to learn, participate in Hacktober and contribute their code.
 Any Program in any language accecpted.
 If you can explain your code with submission of it that would be better for beginners to understand.
+This is the platform to share your code. So, share it.
 
 ## Requirements
 
@@ -114,5 +115,5 @@ Have patience and contribute more.
 
 
 ## Disclaimer
-This is Just for Beginners to help in contribution and make their first pull request.
+This is Just for Beginners to help for open source contribution and make their first pull request.
 [@ALLINONE4298](https://github.com/ALLINONE4298) receives no commission or incentives for your participating in either contributing or entering the Hacktoberfest event.
