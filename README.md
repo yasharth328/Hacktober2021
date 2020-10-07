@@ -106,13 +106,12 @@ At this point, you are ready to make a pull request to the original repository.
 
 You should navigate to your forked repository, and press the “New pull request” button on your left-hand side of the page.
 
-## Hurray!! You just successfully create your first pull request
-
 ### 11. And wait for owner to merge
 
 If there is no merge conflict then owner will merge your pull request.
 Have patience and contribute more.
 
+## Hurray!! You just successfully create your first pull request
 
 ## Disclaimer
 This is Just for Beginners to help for open source contribution and make their first pull request.
