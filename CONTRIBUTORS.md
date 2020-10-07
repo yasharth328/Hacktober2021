@@ -4,3 +4,4 @@ This is a list showing the GitHub usernames of all who have contributed to this 
 
 -[@ALLINONE4298](https://github.com/ALLINONE4298)
 -[@navdeepsingh4298](https://github.com/navdeepsingh4298)
+-[@JonasBerx](https://github.com/JonasBerx)
