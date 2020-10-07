@@ -34,7 +34,9 @@ fork:- (means) it create a copy of repository in your account to commit.
 ### 3. Clone Repository
 
 after forking type following command in terminal to clone in your pc
-`git clone https://github.com/user-name/Hacktober2020.git`
+```
+git clone https://github.com/user-name/Hacktober2020.git
+```
 
 replace user-name with your github username
 
