@@ -66,7 +66,7 @@ e.g. abc.cpp
 Type following commands
 
 ```
-git add 
+git add .
 git commit -m "message about commit"
 ```
 
