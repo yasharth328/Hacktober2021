@@ -1,7 +1,7 @@
 # To-Do-List-App
 This is my first To Do List App.
 
-## [See Live](httpps://navdeepsingh4298.github.io/To-Do-List-App)
+## [See Live](https://navdeepsingh4298.github.io/To-Do-List-App/)
 
 # Requirement
 1. Install latest nodejs
