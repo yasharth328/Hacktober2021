@@ -1,6 +1,6 @@
 # Welcome Here 
 
-## In this, add folder for your chat app. (Any chat app)
+## In this, add your chat app folder. (Any kind of chat app)
 
 #### provided it should have basic message functionality
 #### use any technology
