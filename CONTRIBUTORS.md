@@ -10,8 +10,20 @@ This is a list showing the GitHub usernames of all who have contributed to this 
 
 -[@ThijsVlaeyen](https://github.com/ThijsVlaeyen)
 
+-[@Hunnysunaria](https://github.com/Hunnysunaria)
+
+-[@anjali1102](https://github.com/anjali1102)
+
 -[@Madhumitha R](https://github.com/Madhu-ram06)
 
 -[@shreya-bit](https://github.com/shreya-bit)
 
 -[@DzambaTz](https://github.com/DzambaTz)
+
+-[@kuchiie](https://github.com/kuchiie)
+
+-[@Danialmonachan11](https://github.com/Danialmonachan11)
+
+-[@An-prog-hub](https://github.com/An-prog-hub)
+
+-[@anandpr24100](https://github.com/anandpr24100)
