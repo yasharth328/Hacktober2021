@@ -1,4 +1,4 @@
-# Hacktoberfest 2020 Hello World !!!
+# Hacktoberfest 2020 is here !!!
 
 ## Welcome to Hacktoberfest 2020.
 
