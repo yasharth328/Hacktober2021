@@ -6,6 +6,8 @@ This is a list showing the GitHub usernames of all who have contributed to this 
 
 -[@navdeepsingh4298](https://github.com/navdeepsingh4298)
 
+-[@ManasiSaiba99](https://github.com/manasisaiba)
+
 -[@JonasBerx](https://github.com/JonasBerx)
 
 -[@ThijsVlaeyen](https://github.com/ThijsVlaeyen)
