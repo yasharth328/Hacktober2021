@@ -29,3 +29,5 @@ This is a list showing the GitHub usernames of all who have contributed to this 
 -[@anandpr24100](https://github.com/anandpr24100)
 
 --[@Joe Rush](https://github.com/joerush18)
+
+-[@ManoJarvis](https://github.com/ManoJarvis)
