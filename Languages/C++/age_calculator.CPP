@@ -1,5 +1,5 @@
-// Today we are going to make AGE CALCULATOR to calculate your age
-// So, Let's Do it.
+// This is AGE CALCULATOR program to calculate your age
+
 
 #include<iostream.h>
 #include<conio.h>
@@ -54,6 +54,3 @@ void main()
   }while(ch=='y');
   getch();
 }
-// Thats it Now compile it (Alt+F9)
-// Now Run it (Ctrl+F9)
-// Thanks for Watching this video
