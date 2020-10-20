@@ -1,4 +1,4 @@
-# Hacktoberfest 2020 Hello World !!!
+# Hacktoberfest 2020 is here !!!
 
 ## Welcome to Hacktoberfest 2020.
 
@@ -59,10 +59,9 @@ git checkout -b new-branch-name
 ### 5. Add code in respective languages folder 
 
 Once you have completed these steps, you are ready to start contributing
-Firstly, Add your name in contributors list.
-then, start contributing.
-create program file and write code into it.
-e.g. abc.cpp
+whatever programming language you know, you can contribute your code in that.
+However, Your code files must be in respective folder. By doing this repository will be organized and well maintained.
+hope you follow this. I'll add your namme in contributors list as you start contibuting.
 
 ### 6. Commit Changes 
 
