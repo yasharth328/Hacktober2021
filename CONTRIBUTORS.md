@@ -20,6 +20,8 @@ This is a list showing the GitHub usernames of all who have contributed to this 
 
 -[@shreya-bit](https://github.com/shreya-bit)
 
+-[@Maurya-23](https://github.com/Maurya-23)
+
 -[@DzambaTz](https://github.com/DzambaTz)
 
 -[@kuchiie](https://github.com/kuchiie)
@@ -33,3 +35,4 @@ This is a list showing the GitHub usernames of all who have contributed to this 
 -[@Joe Rush](https://github.com/joerush18)
 
 -[@ManoJarvis](https://github.com/ManoJarvis)
+
