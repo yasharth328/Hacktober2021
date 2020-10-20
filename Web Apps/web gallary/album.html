@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>albums</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        
+        
+        
+    <style>
+      .panel
+      {
+        background-color:#030303;
+        overflow: hidden;
+      }
+      
+      .panel a
+      {
+        float:left;
+        color:#f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size:17px;
+      }
+              
+      .panel a:hover
+      {
+        background-color: #ddd;
+        color:black;
+        text-decoration: line-through;
+        font-size:150%;
+        text-align: center;
+      }
+      .panel a.active
+      {
+        background-color: #4CAF50;
+        color:white;
+      }
+      a
+      {
+        border-color:green;
+        border-radius:100px;
+        margin: 10px;
+      }      
+    </style>
+  </head>
+    
+  <body>
+    <div class="sticky-top">
+      <div class=panel>
+        <span> <a  href="/static project/home.html">home</a></span>
+        <span><a class="active" href="/static project/album.html">album</a></span>
+      </div>
+    </div>
+
+        
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">album</li>
+      </ol>
+    </nav>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card" style="width: 18rem;">
+          <img src="https://stillmed.olympic.org/media/Images/OlympicOrg/News/2019/12/11/2019-12-11-mountain-day-featured-01.jpg" style="height:50%; max-height: 100%;" class="card-img-top" >
+          <div class="card-body">
+            <p class="card-text">to see some beautiful mountain pictures click<a href="/static project/albums/mountains.html">here</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card" style="width: 18rem;">
+          <img src="https://stillmed.olympic.org/media/Images/OlympicOrg/News/2019/12/11/2019-12-11-mountain-day-featured-01.jpg" class="card-img-top">
+          <div class="card-body">
+            <p class="card-text"> some beautiful landscapes are<a href="/static project/albums/landscapes.html">here</a>!!</p>
+          </div>
+        </div>
+      </div>
+    </div>   
+      <br> <br>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card" style="width: 18rem;">
+          <img src="https://stillmed.olympic.org/media/Images/OlympicOrg/News/2019/12/11/2019-12-11-mountain-day-featured-01.jpg" class="card-img-top" >
+          <div class="card-body">
+            <p class="card-text">hd animals pictures are <a href="/static project/albums/animals.html">click</a> !!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

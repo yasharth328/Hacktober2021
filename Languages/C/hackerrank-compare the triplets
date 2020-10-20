@@ -1,0 +1,57 @@
+#include<stdio.h>
+main()
+{
+	int a[3],b[3],i=0,j=0,sum=0,sum1=0,sum2=0,sum3=0,sum5=0,sum4=0,zero=0;
+	int sum_alice=0,sum_bob=0;
+	
+	for(i;i<3;i++)
+{
+scanf("%d",&a[i]);
+}
+//for bob
+for(j;j<3;j++)
+{
+ scanf("%d",&b[j]);  
+}
+//first
+if (a[0]>b[0])
+{
+sum=1;
+}
+if (a[1]>b[1])
+{
+sum1=1;
+}
+if (a[2]>b[2])
+{
+sum2=1;
+}
+sum_alice=sum+sum1+sum2+zero;
+//second
+if (a[0]<b[0])
+{
+sum3=1;
+}
+if (a[1]<b[1])
+{
+sum4=1;
+}
+if (a[2]<b[2])
+{
+sum5=1;
+}
+if(a[0]=b[0])
+{
+	zero=0;
+}
+if(a[1]=b[1])
+{
+	zero=0;
+}
+if(a[2]=b[2])
+{
+	zero=0;
+}
+sum_bob=sum3+sum4+sum5+zero;
+printf("%d %d",sum_alice,sum_bob);
+}
