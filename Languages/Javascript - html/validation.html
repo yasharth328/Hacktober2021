@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>Username and password</title>
+<script language="javascript">
+function validate()
+{
+unm=document.f1.t1.value;
+pwd=document.f1.t2.value;
+if(unm=="")
+{
+alert("Invalid Username! It cannot be empty")
+document.f1.t1.value="";
+document.f1.t1.focus();
+return true;
+}
+var sp=unm.indexOf(" ")
+if(sp>=0)
+{
+alert("Invalid Username! Space not allowed")
+document.f1.t1.value="";
+document.f1.t1.focus();
+return true;
+}
+var l=unm.length;
+if((l<=5)||(l>=10))
+{
+alert("Invalid Username! Length should be between 5 to 10 characters")
+document.f1.t1.value="";
+document.f1.t1.focus();
+return true;
+}
+a=unm.indexOf("@");
+b=unm.indexOf("$");
+c=unm.indexOf("#");
+d=unm.indexOf("*");
+e=unm.indexOf("(");
+f=unm.indexOf(")");
+g=unm.indexOf("[");
+h=unm.indexOf("]");
+i=unm.indexOf("{");
+j=unm.indexOf("}");
+k=unm.indexOf(",");
+l=unm.indexOf(".");
+m=unm.indexOf("<");
+n=unm.indexOf(">")
+o=unm.indexOf("?");
+if((a>=0)||(b>=0)||(c>=0)||(d>=0)||(e>=0)||(f>=0)||(g>=0)||(h>=0)||(i>=0)||(j>=0)||(k>=0)||(l>=0)||(m>=0)||(n>=0)||(o>=0))
+{
+alert("Invalid Username! Special characters not allowed")
+document.f1.t1.value="";
+document.f1.t1.focus();
+return true;
+}
+var i=0;
+while(i<unm.length)
+{
+ch=unm.charAt(i);
+if(isNaN(ch)==1)
+{
+if(ch==ch.toUpperCase(i))
+{
+alert("Invalid Username! UPPERCASE not allowed")
+document.f1.t1.value="";
+document.f1.t1.focus();
+return true;
+}
+}
+i++;
+}
+if(pwd=="")
+{
+alert("Invalid Password! It cannot be empty")
+document.f1.t2.value="";
+document.f1.t2.focus();
+return true;
+}
+var sp=pwd.indexOf(" ")
+if(sp>=0)
+{
+alert("Invalid Password! Space not allowed")
+document.f1.t2.value="";
+document.f1.t2.focus();
+return true;
+}
+var l=pwd.length;
+if((l<=6)||(l>=12))
+{
+alert("Invalid Password! Length should be between 6 to 12 characters")
+document.f1.t2.value="";
+document.f1.t2.focus();
+return true;
+}
+a=pwd.indexOf("@");
+b=pwd.indexOf("$");
+c=pwd.indexOf("#");
+d=pwd.indexOf("*");
+e=pwd.indexOf("(");
+f=pwd.indexOf(")");
+g=pwd.indexOf("[");
+h=pwd.indexOf("]");
+i=pwd.indexOf("{");
+j=pwd.indexOf("}");
+k=pwd.indexOf(",");
+l=pwd.indexOf(".");
+m=pwd.indexOf("<");
+n=pwd.indexOf(">");
+o=pwd.indexOf("?");
+if((a>=0)||(b>=0)||(c>=0)||(d>=0)||(e>=0)||(f>=0)||(g>=0)||(h>=0)||(i>=0)||(j>=0)||(k>=0)||(l>=0)||(m>=0)||(n>=0)||(o>=0))
+{
+alert("Invalid Password! Special characters not allowed")
+document.f1.t2.value="";
+document.f1.t2.focus();
+return true;
+}
+alert("Login Successful")
+}
+</script>
+</head>
+<body>
+<h1>Username and Password Validation</h1>
+<form name="f1">
+Username &nbsp;<input type="text" name="t1">
+<br>
+<br>
+Password &nbsp;<input type="password" name="t2">
+<br>
+<br>
+<br>
+<input type="button" value="submit" onclick="validate()">
+</form>
+</body>
+</html>
+
