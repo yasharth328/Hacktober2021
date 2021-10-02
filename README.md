@@ -1,6 +1,6 @@
-# Hacktoberfest 2020 is here !!!
+# Hacktoberfest 2021 is here !!!
 
-## Welcome to Hacktoberfest 2020.
+## Welcome to Hacktoberfest 2021.
 
 Aim of this repository is to help someone to learn, participate in Hacktober and contribute their code.
 Any Program in any language accecpted.
@@ -17,7 +17,12 @@ This is the platform to share your code. So, share it.
 
 ## What is Hacktoberfest?
 
-Hacktoberfest is a program by Digital Ocean, DEV and Github, where you can easily win a T-Shirt just by making 4 pull requests in the month of October to any open source projects on Github.
+Hacktoberfest, in its 8th year, is a month-long celebration of open source software run by DigitalOcean. During the month of October, we invite you to join open-source software enthusiasts, beginners, and the developer community by contributing to open-source projects. You can do this in a variety of ways:
+* Prepare and share your project for collaboration
+* Contribute to the betterment of a project via pull requests
+* Organize an event
+* Mentor others
+* Donate directly to open source projects
 
 ## How to get started (Follow the steps)
 
@@ -113,5 +118,5 @@ Have patience and contribute more.
 ## Hurray!! You just successfully create your first pull request
 
 ## Disclaimer
-This is Just for Beginners to help for open source contribution and make their first pull request.
-[@ALLINONE4298](https://github.com/ALLINONE4298) receives no commission or incentives for your participating in either contributing or entering the Hacktoberfest event.
+This is Just for Beginners to help for their contributions and make them familiar with open source.
+This is a free platform to make mistakes and learn from them.
