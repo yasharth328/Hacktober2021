@@ -33,11 +33,11 @@ int main()
   return 0;
 }
 
-input:Enter number of rows
-      5
-output:
-  *
- ***
-*****
- ***
-  *
+// input:Enter number of rows
+//       5
+// output:
+//   *
+//  ***
+// *****
+//  ***
+//   *
