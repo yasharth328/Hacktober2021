@@ -41,3 +41,5 @@ This is a list showing the GitHub usernames of all who have contributed to this 
 -[@ManoJarvis](https://github.com/ManoJarvis)
 
 -[@Shubham Rawat](https://github.com/Shubhamrawat5)
+
+-[@ShashwatSamadhiya](https://github.com/ShashwatSamadhiya)
