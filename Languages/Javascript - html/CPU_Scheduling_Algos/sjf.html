@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+  </style>
+  <title>Shortest Job First</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <h2 class="display-3">Shortest Job First</h2>
+        </a>
+      </div>
+    </nav>
+
+    <p class="lead">
+      Shortest job first (SJF) or shortest job next, is a scheduling policy that selects the waiting process with the smallest execution time to execute next. SJN is a non-preemptive algorithm. 
+    </p>
+    <ul>
+      <li>Shortest Job first has the advantage of having a minimum average waiting time among all scheduling algorithms.</li>
+      <li>It is a Greedy Algorithm.</li>
+      <li>It may cause starvation if shorter processes keep coming. This problem can be solved using the concept of ageing.</li>
+      <li>It is practically infeasible as Operating System may not know burst time and therefore may not sort them. While it is not possible to predict execution time, several methods can be used to estimate the execution time for a job, such as a weighted average of previous execution times. SJF can be used in specialized environments where accurate estimates of running time are available.</li>
+    </ul>
+  <pre>
+    <p class="lead fs-6 border">
+      // Shotest Job First Scheduling (SJF) (Non-Preemptive)
+
+      #include < stdio.h >
+
+      struct Process{
+        int arrivalTime, burstTime, waitingTime, completionTime, turnAroundTime, isCompleted;
+      };
+      int currentTime = 0;
+
+      // Function to get process ID with minBurstTime
+      int getMinBurstTimePID(struct Process X[], int noOfProcesses){
+        int minBurstTime=999, minBurstTimePID;
+        for (int i = 1; i < noOfProcesses; i++){
+          if((X[i].arrivalTime <= currentTime) && (X[i].isCompleted == 0) && (X[i].burstTime < minBurstTime)){
+            minBurstTime = X[i].burstTime;
+            minBurstTimePID = i;
+          }
+        }
+        return minBurstTimePID;
+      }
+
+      // Function to check whether all processes completed or not
+      int isAllProcessesCompleted(struct Process Y[], int noOfProcesses){
+        for(int i = 0; i < noOfProcesses; i++){
+          if(Y[i].isCompleted != 1)
+            return 0;
+        }
+        return 1;
+      }
+
+      int main(){
+        int i, j, done, noOfProcesses;
+        float totalWaitingTime = 0, totalTurnAroundTime = 0;
+
+        printf("\nEnter no. of processes: ");
+        scanf("%d", &noOfProcesses);
+
+        struct Process P[noOfProcesses];
+
+        printf("\nEnter Arrival Time for processes: ");
+        for (i = 0; i < noOfProcesses; i++)    
+          scanf("%d", &P[i].arrivalTime);
+
+        printf("\nEnter Burst Time for processes: ");
+        for (i = 0; i < noOfProcesses; i++){
+          scanf("%d", &P[i].burstTime);
+          P[i].isCompleted = 0;
+        }
+
+        while(done != 1){
+          for (i = 0; i < noOfProcesses; i++){
+            j = getMinBurstTimePID(P, noOfProcesses);
+            currentTime += P[j].burstTime;
+            P[j].completionTime = currentTime;
+            P[j].turnAroundTime = P[j].completionTime - P[j].arrivalTime;
+            P[j].waitingTime = P[j].turnAroundTime - P[j].burstTime;
+            P[j].isCompleted = 1;
+            totalWaitingTime += P[j].waitingTime;
+            totalTurnAroundTime += P[j].turnAroundTime;
+          }
+          done = isAllProcessesCompleted(P, noOfProcesses);
+        }
+
+        printf("\nProcess \tArrival Time \tBurst Time \t Waiting Time\t TurnAround Time");
+        for (i = 0; i < noOfProcesses; i++)
+          printf("\nP%d \t\t %d \t\t %d \t\t %d \t\t %d", i, P[i].arrivalTime, P[i].burstTime, P[i].waitingTime, P[i].turnAroundTime);
+        printf("\n\nAverage Waiting Time: %.2f", totalWaitingTime / noOfProcesses);
+        printf("\nAverage Turnaround Time: %.2f", totalTurnAroundTime / noOfProcesses);
+        printf("\nTotal Execution Time: %d", currentTime);
+
+        return 0;
+      }
+    </p>
+  </pre>
+
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+          Made by <a href="http://github.com/navdeepsingh4298">Navdeep Singh</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
