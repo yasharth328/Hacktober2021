@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+  </style>
+  <title>First Come First Serve</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <h2 class="display-3">First Come First Serve</h2>
+        </a>
+      </div>
+    </nav>
+
+    <p class="lead">
+      Given n processes with their burst times, the task is to find average waiting time and average turn around time using FCFS scheduling algorithm. 
+      First in, first out (FIFO), also known as first come, first served (FCFS), is the simplest scheduling algorithm. FIFO simply queues processes in the order that they arrive in the ready queue. 
+      In this, the process that comes first will be executed first and next process starts only after the previous gets fully executed. 
+      Here we are considering that arrival time for all processes is 0.
+    </p>
+
+  <pre>
+    <p class="lead fs-6 border">
+      // First Come First Serve Scheduling (Non-Preemptive)
+      
+      #include < stdio.h >
+
+      struct Process{
+        int arrivalTime, burstTime, waitingTime, completionTime, turnAroundTime;
+      };
+      int currentTime = 0;
+
+      int main()
+      {
+        int noOfProcesses,i;
+        float totalWaitingTime=0, totalTurnAroundTime=0;
+
+        printf("\nEnter no. of processes: ");
+        scanf("%d", &noOfProcesses);
+
+        struct Process P[noOfProcesses];
+
+        printf("\nEnter Arrival Time for processes: ");
+        for (i = 0; i < noOfProcesses; i++)    
+          scanf("%d", &P[i].arrivalTime);
+        
+        printf("\nEnter Burst Time for processes: ");
+        for (i = 0; i < noOfProcesses; i++)
+          scanf("%d", &P[i].burstTime);
+
+        for (i = 0; i < noOfProcesses; i++)
+        {
+          currentTime += P[i].burstTime;
+          P[i].completionTime = currentTime;
+          P[i].turnAroundTime = P[i].completionTime - P[i].arrivalTime;
+          P[i].waitingTime = P[i].turnAroundTime - P[i].burstTime;
+          totalWaitingTime += P[i].waitingTime;
+          totalTurnAroundTime += P[i].turnAroundTime;
+        }
+
+        printf("\nProcess \tArrival Time \tBurst Time \t Waiting Time\t TurnAround Time");
+        for (i = 0; i < noOfProcesses; i++)
+          printf("\nP%d \t\t %d \t\t %d \t\t %d \t\t %d", i, P[i].arrivalTime, P[i].burstTime, P[i].waitingTime, P[i].turnAroundTime);
+        printf("\n\nAverage Waiting Time: %.2f", totalWaitingTime / noOfProcesses);
+        printf("\nAverage Turnaround Time: %.2f", totalTurnAroundTime / noOfProcesses);
+        printf("\nTotal Execution Time: %d", currentTime);
+
+        return 0;
+      }
+    </p>
+  </pre>
+
+
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+          Made by <a href="http://github.com/navdeepsingh4298">Navdeep Singh</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+  </style>
+  <title>Priority Scheduling (Preemptive)</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <h2 class="display-3">Priority Scheduling (Preemptive)</h2>
+        </a>
+      </div>
+    </nav>
+
+    <p class="lead">
+      In Preemptive Priority Scheduling, at the time of arrival of a process in the ready queue, its Priority is compared with the priority of the other processes present in the ready queue as well as with the one which is being executed by the CPU at that point of time. The One with the highest priority among all the available processes will be given the CPU next.
+    </p>
+    <p class="lead">
+      Preemptive scheduling is used when a process switches from running state to ready state or from the waiting state to ready state. The resources (mainly CPU cycles) are allocated to the process for a limited amount of time and then taken away, and the process is again placed back in the ready queue if that process still has CPU burst time remaining. That process stays in the ready queue till it gets its next chance to execute. 
+    </p>
+  <pre>
+    <p class="lead fs-6 border">
+     // Priority Scheduling (Preemptive)
+
+    #include < stdio.h >
+
+    struct Process{
+      int arrivalTime, burstTime, priority, remainingTime, waitingTime, turnAroundTime, completionTime, isCompleted;
+    };
+    int currentTime = 0;
+
+    // Function to get process ID with highPriority
+    int getHighPriorityPID(struct Process X[], int noOfProcesses){
+      int highPriority = -1, highPriorityPID;
+      for (int i = 0; i < noOfProcesses; i++){
+        if((X[i].arrivalTime <= currentTime) && (X[i].isCompleted == 0) && (X[i].priority > highPriority)){
+          highPriority = X[i].priority;
+          highPriorityPID = i;
+        }
+      }
+      return highPriorityPID;
+    }
+
+    // Function to check whether all processes completed or not
+    int isAllProcessesCompleted(struct Process Y[], int noOfProcesses){
+      for(int i = 0; i < noOfProcesses; i++){
+        if(Y[i].isCompleted != 1)
+          return 0;
+      }
+      return 1;
+    }
+
+    int main()
+    {
+      int i, done, noOfProcesses;
+      float totalWaitingTime=0, totalTurnAroundTime=0;
+
+      printf("\nEnter no. of processes: ");
+      scanf("%d", &noOfProcesses);
+
+      struct Process P[noOfProcesses];
+
+      printf("\nEnter Arrival Time for processes: ");
+      for (i = 0; i < noOfProcesses; i++)    
+        scanf("%d", &P[i].arrivalTime);
+
+      printf("\nEnter Priority for processes: ");
+      for (i = 0; i < noOfProcesses; i++)    
+        scanf("%d", &P[i].priority);  
+
+      printf("\nEnter Burst Time for processes: ");
+      for (i = 0; i < noOfProcesses; i++){
+        scanf("%d", &P[i].burstTime);
+        P[i].remainingTime = P[i].burstTime;
+        P[i].isCompleted = 0;
+      }
+
+      while (done != 1){
+        i = getHighPriorityPID(P, noOfProcesses);
+        currentTime += 1;
+        P[i].remainingTime -= 1;
+
+        if(P[i].remainingTime == 0) {
+          P[i].isCompleted = 1;
+          P[i].completionTime = currentTime;
+          P[i].turnAroundTime = P[i].completionTime - P[i].arrivalTime;
+          P[i].waitingTime = P[i].turnAroundTime - P[i].burstTime;
+          totalWaitingTime += P[i].waitingTime;
+          totalTurnAroundTime += P[i].turnAroundTime;
+        }
+        done = isAllProcessesCompleted(P, noOfProcesses);
+      }
+
+      printf("\nProcess \tArrival Time \tBurst Time \t Priority \t Waiting Time\t TurnAround Time");
+      for (i = 0; i < noOfProcesses; i++)
+        printf("\nP%d \t\t %d \t\t %d \t\t %d \t\t %d \t\t %d", i, P[i].arrivalTime, P[i].burstTime, P[i].priority, P[i].waitingTime, P[i].turnAroundTime);
+
+      printf("\n\nAverage Waiting Time: %.2f", totalWaitingTime / noOfProcesses);
+      printf("\nAverage Turnaround Time: %.2f", totalTurnAroundTime / noOfProcesses);
+      printf("\nTotal Execution Time: %d", currentTime);
+
+      return 0;
+    }
+
+    </p>
+  </pre>
+
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+          Made by <a href="http://github.com/navdeepsingh4298">Navdeep Singh</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
