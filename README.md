@@ -18,11 +18,12 @@ This is the platform to share your code. So, share it.
 ## What is Hacktoberfest?
 
 Hacktoberfest, in its 8th year, is a month-long celebration of open source software run by DigitalOcean. During the month of October, we invite you to join open-source software enthusiasts, beginners, and the developer community by contributing to open-source projects. You can do this in a variety of ways:
-* Prepare and share your project for collaboration
-* Contribute to the betterment of a project via pull requests
-* Organize an event
-* Mentor others
-* Donate directly to open source projects
+
+- Prepare and share your project for collaboration
+- Contribute to the betterment of a project via pull requests
+- Organize an event
+- Mentor others
+- Donate directly to open source projects
 
 ## How to get started (Follow the steps)
 
@@ -31,6 +32,7 @@ Hacktoberfest, in its 8th year, is a month-long celebration of open source softw
 https://hacktoberfest.digitalocean.com/
 
 ### 1. Give this Project a Star :star:
+
 If you liked working on this repo, please share this repo as much
 as you can and star this repo to help as many people in opensource as you can.
 
@@ -42,6 +44,7 @@ fork:- (means) it create a copy of repository in your account to commit.
 ### 3. Clone Repository
 
 after forking type following command in terminal to clone in your pc
+
 ```
 git clone https://github.com/user-name/Hacktober2020.git
 ```
@@ -61,14 +64,14 @@ Type following command in terminal window
 git checkout -b new-branch-name
 ```
 
-### 5. Add code in respective languages folder 
+### 5. Add code in respective languages folder
 
 Once you have completed these steps, you are ready to start contributing
 whatever programming language you know, you can contribute your code in that.
 However, Your code files must be in respective folder. By doing this repository will be organized and well maintained.
 hope you follow this. I'll add your namme in contributors list as you start contibuting.
 
-### 6. Commit Changes 
+### 6. Commit Changes
 
 Type following commands
 
@@ -76,6 +79,7 @@ Type following commands
 git add .
 git commit -m "message about commit"
 ```
+
 ### 7. Configure a Remote for the Fork
 
 Next, you’ll have to specify a new remote upstream repository for us to sync with the fork. This will be the original repository that you forked from. You’ll have to do this with the `git remote add` command.
@@ -86,10 +90,10 @@ git remote add upstream https://github.com/ALLINONE4298/Hacktober2021.git
 
 In this example, `upstream` is the shortname we have supplied for the remote repository since in terms of Git, “upstream” refers to the repository that you cloned from. If you want to add a remote pointer to the repository of a collaborator, you may want to provide that collaborator’s username or a shortened nickname for the shortname.
 
-### 8. Pull changes 
+### 8. Pull changes
 
 To get latest code
-Type following command 
+Type following command
 
 ```
 git pull upstream main
@@ -117,5 +121,14 @@ Have patience and contribute more.
 ## Hurray!! You just successfully create your first pull request
 
 ## Disclaimer
+
 This is Just for Beginners to help for their contributions and make them familiar with open source.
 This is a free platform to make mistakes and learn from them.
+
+## Contributors
+
+Thanks ♥ to All Contributors 🔥🔥
+
+<a href = "https://github.com/ALLINONE4298/Hacktober2021/graphs/contributors">
+<img src = "https://contrib.rocks/image?repo=ALLINONE4298/Hacktober2021"/>
+</a>
